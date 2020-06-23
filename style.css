@@ -1,0 +1,48 @@
+/* Remove padding and margin of every element  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    color: rgb(193, 108, 222);
+}
+
+/* Id has priority so, the h1 with color "pink" is not going to work  */
+.first-title {
+    color: red
+}
+
+h1 {
+    color: pink; 
+}
+
+
+#youtube-link {
+    color: black;
+}
+
+button {
+    background-color: orange;
+    padding: 30px 20px 10px 0px;
+    margin: 25px;
+}
+
+.nav-links li {
+    color: hotpink;
+}
+
+.nav-links li a{
+    color: orange;
+}
+
+/* !important predomine above the next line to set the color to green  */
+
+ul.links li:nth-child(1) {
+    color: purple !important;
+}
+
+ul.links li:nth-child(1) {
+    color: green;
+}
