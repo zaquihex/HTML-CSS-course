@@ -3,13 +3,77 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/*- - - !important Styling a button - - -*/
+
+button.button-style {
+    margin: 20rem;
+    padding: 2rem 4rem;
+    background: none;
+    border: 0.3rem solid plum;
+    color: purple;
+    font-size: 2.4rem;
+    /* border-radius: 1rem;
+    border-top-left-radius: 2rem;
+    */
+    border-radius: 50%;
+    height: 20rem;
+    width: 20rem
+    
+
+    
+}
+
+/*- - - !Important  "em" get the size form the parent and multiply - - -
+
+.text-section {
+    font-size: 1.5em;
+}
+
+.text-section div {
+    #1.5 times 1.5em because the parent
+    font-size: 1.5em;
+}
+                    /* - - - - - - - - */
+
+/*- - -!Important  "rem" get the size form the html, only the html, and multiply - - -*/
+
+/*.text-section {
+    font-size: 1.ren;
+}
+
+.text-section div {
+    #1.5 times 1.5em because the parent
+    font-size: 1.5em;
+}*/
+                    /* - - - - - - - - */
+
+/*
+div {
+    background: rgb(69, 66, 105);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px solid black;
+}*/
+
+/* --- Sticky position + top: 0% to make the position stycky --- */
+.box1 {
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    position: sticky;
+    top: 0%;
 }
 
 h3 {
     color: rgb(193, 108, 222);
 }
 
-/* Id has priority so, the h1 with color "pink" is not going to work  */
+/* --- Id has priority so, the h1 with color "pink" is not going to work   --- */
 .first-title {
     color: red
 }
@@ -18,6 +82,7 @@ h1 {
     color: pink; 
 }
 
+                            /* - - - - - - - - - - */
 
 #youtube-link {
     color: black;
@@ -37,8 +102,9 @@ button {
     color: orange;
 }
 
-/* !important predomine above the next line to set the color to green  */
+/* --- !important predomine above the next line to set the color to green --- */
 
+/* Select specific child, in this case, the first one*/
 ul.links li:nth-child(1) {
     color: purple !important;
 }
