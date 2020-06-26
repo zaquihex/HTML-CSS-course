@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem will be 10px, so it will be easy to multiplicate*/
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+li,button,label,input,p {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+h3 {
+    font-size: 3rem;
+}
+
+h4,h5 {
+    font-size: 2.8rem;
+}
+
+.main-head {
+    background: #131c27;
+    color:white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+nav {
+    min-height: 10vh;
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
