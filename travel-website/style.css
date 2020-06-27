@@ -4,16 +4,32 @@
     box-sizing: border-box;
 }
 
+button {
+    padding: 2rem 6rem;
+    background: #4c6e97;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    transition: background  1s ease-in-out;
+}
+button:hover {
+    cursor: pointer;
+    background: #2c6e97;
+}
+
 html {
     /* 1rem will be 10px, so it will be easy to multiplicate*/
     font-size: 62.5%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
     font-size: 2.6rem;
 }
 
-li,button,label,input,p {
+li, button, label, input, p {
     font-size: 2rem;
 }
 
@@ -22,6 +38,7 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+    font-weight: normal;
 }
 
 h4,h5 {
@@ -31,6 +48,7 @@ h4,h5 {
 .main-head {
     background: #131c27;
     color:white;
+    align-items: center;
 }
 
 a {
@@ -44,4 +62,171 @@ nav {
     display: flex;
     width: 90%;
     margin: auto;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    flex: 1 1 60rem;
+    /*Same space between the elements, using all width*/
+    justify-content: space-around;
+    padding: 2rem;
+    /* Align elements to the center vertically */
+    align-items: center;
+    list-style: none;
+}
+
+#logo {
+    flex: 1 1 40rem;
+    align-self: center;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 400;
+}
+
+.hero {
+    min-height: 90vh;
+    /* !important - - - The fourth number change the opactiy of the color. Good point for the rgb color! - - - */
+    background: linear-gradient(rgba(0,0,0,0.5),transparent),url('./img/landing-page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 5rem;
+}
+/* BENEFITS SECTIONS */
+
+#Locations {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),transparent), url(./img/new-york-page.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.Locations-head {
+    width: 90%;
+    margin: auto;
+}
+
+.Locations-head h2{
+    padding: 1rem 0rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+}
+/* Make the color transparent and give color text with the background gradient */
+.Locations-head h3{
+    padding: 4rem 0rem;
+    background: linear-gradient(#131c27, #663b34);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+}
+.moving-cloud-1 {
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+    top: 20%;
+    z-index: -1;
+    opacity: 0.5;
+    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+    from {
+        transform: translate(10%,-10%);
+    }
+    to {
+        transform: translate(0%,0%);
+    }
+    /*0% {
+        background-color: lightblue;
+    }
+
+    25% {
+        background-color: rgb(36, 84, 126);
+    }
+    100% {
+        background-color: rgb(159, 65, 164);
+    }*/
+}
+
+/* Benefits section */
+
+.benefits-head {
+    background: #343c44;
+    padding: 3rem;
+    min-height:30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.benefits-head h3 {
+    padding: 1rem;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+}
+
+.cards img {
+    height: 200px;
+}
+
+.card {
+    background-color: orange;
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+}
+
+/* Media Query*/
+@media screen and  (max-width: 1111px) {
+
+    html {
+        font-size: 45%;
+    }
+
+
+    nav {
+        text-align: center;
+    }
+    #logo {
+        padding: 2rem;
+    }
+
+    .moving-cloud-1 {
+        z-index: -1;
+    }
+    .moving-cloud-2 {
+        z-index: -2;
+    }
+
+    .Locations-head h3 {
+        background: rgb(19,28,39,0.9);
+        color: white;
+    }
 }
