@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem will be 10px, so it will be easy to multiplicate*/
+    font-size: 13px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: var($header1);
+}
+
+li, button, label, input, p,a {
+    font-size: var($text);
+}
+
+h2 {
+    font-size: var($header2);
+}
+h3 {
+    font-size: var($header3);
+}
+
+h4,h5 {
+    font-size: var($header4);
+    color: black
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $gray-text;
+}
